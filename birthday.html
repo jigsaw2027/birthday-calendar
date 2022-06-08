@@ -3,10 +3,12 @@
     <head>
         <title>Birthday Calendar</title>
         <meta charset="UTF_8">
+        <link href="./birthday.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <h1>Staff Birthday Calendar</h1>
+        <fieldset style="width:700px">
             <div class="titles">
                 <select id="name">
                 <option value="name">Name</option>
@@ -21,7 +23,7 @@
             </select>
             </div>
             <form>
-                <input type="search" placeholder="Search a name, date or a wishlist item">  
+                <input type="search" placeholder="Search a name, date or a wishlist item" style="width: 300px">
             </form>
             <table>
               <tr>
@@ -40,7 +42,7 @@
               </tr>
             </table>
             <form>
-                <fieldset>
+                <fieldset style="max-width: 600px">
                     <div class="fname">
                         <label for="fname">First Name</label><br>
                         <input type="text" id="fname" placeholder="Johnny" name="fname"><br>
@@ -58,7 +60,24 @@
                     <label for="female">Female</label>
                     <input type="radio" id="female" value="female">
                     </div>
+                    <div class="date">
+                        <label for="date">Date Of Birth</label><br>
+                        <input type="date" id="date" value="date"><br>
+                    </div>
+                    <div class="password">
+                        <label for="password">Password</label><br>
+                        <input type="password" id="password" value="password"><br>
+                    </div>
+                    <div class="wishlist">
+                        <label for="wishlist" id="wishlist" placeholder="Roses, Lavender,blah blah...">Wishlist</label><br>
+                        <input type="textarea" id="wishlist" value="wishlist">
+                    </div>
+                    <div class="buttons">
+                    <input type="button" value="Cancel" name="cancel">
+                    <input type="button" value="Ok" name="Ok">
+                </div>
                 </fieldset>
             </form>
+        </fieldset>
     </body>
 </html>
