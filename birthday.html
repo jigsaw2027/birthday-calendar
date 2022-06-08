@@ -3,8 +3,62 @@
     <head>
         <title>Birthday Calendar</title>
         <meta charset="UTF_8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        
+        <h1>Staff Birthday Calendar</h1>
+            <div class="titles">
+                <select id="name">
+                <option value="name">Name</option>
+            </select>
+
+            <select id="birthday">
+                <option value="birthday">Birthday</option>
+            </select>
+
+            <select id="gender">
+                <option value="gender">Gender</option>
+            </select>
+            </div>
+            <form>
+                <input type="search" placeholder="Search a name, date or a wishlist item">  
+            </form>
+            <table>
+              <tr>
+                    <td>Frodo Baggins</td>
+                    <td>March 24</td>
+                    <td>Male</td>
+                    <td><a href="#"> edit</a></td>
+                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+              </tr>
+              <tr>
+                    <td>Luke Skywalker</td>
+                    <td>April 26</td>
+                    <td>Male</td>
+                    <td><a href="#"> edit</a></td>
+                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+              </tr>
+            </table>
+            <form>
+                <fieldset>
+                    <div class="fname">
+                        <label for="fname">First Name</label><br>
+                        <input type="text" id="fname" placeholder="Johnny" name="fname"><br>
+                    </div>
+
+                    <div class="lname">
+                    <label for="lname">Last Name</label><br>
+                    <input type="text" id="lname" placeholder="Appleseed" name="lname"><br>
+                    </div>
+
+                    <div class="gender">
+                    <label for="gender">Gender</label><br>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" value="female">
+                    </div>
+                </fieldset>
+            </form>
     </body>
 </html>
