@@ -1,21 +1,301 @@
-/* .titles{
+.titles{
     position: absolute;
-    width: 870px;
+    width: 626px;
     height: 51px;
-    left: 185px;
-    bottom: 152px;
-    background-color: #B57369;
-    border: 2px solid #B57369;
+    left: 287px;
+    top: 252px;
+    
+    background: #B57369;
     border-radius: 20px 20px 0px 0px;
-    display: flex;
 
 
 }
-#name{
+.name{
+    position: absolute;
+width: 58px;
+height: 25px;
+left: 47px;
+top: 15px;
 
-} */
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+}
+
+.birthday{
+    position: absolute;
+width: 82px;
+height: 25px;
+left: 277px;
+top: 15px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+
+}
+.gender{position: absolute;
+width: 71px;
+height: 25px;
+left: 470px;
+top: 15px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+}
+.class{
+    position: absolute;
+width: 706px;
+height: 32px;
+left: 367px;
+top: 310px;
+
+background: #F7F7F7;
+border: 1px solid #EEEEEE;
+}
+
+h1{
+    position: absolute;
+width: 799px;
+height: 89px;
+left: 251px;
+top: 103px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 700;
+font-size: 70px;
+line-height: 89px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+.fcard{
+    position: absolute;
+width: 1080px;
+height: 305px;
+left: 285px;
+top: 469px;
+
+background: #FFFFFF;
+border-radius: 0px 0px 20px 20px;
+}
+#luke{
+    position: absolute;
+    width: 626px;
+    height: 60px;
+    left: 280px;
+    top: 209px;
+    
+    background: #FFFFFF;
+}
+#frodo{
+    position: absolute;
+    width: 626px;
+    height: 60px;
+    left: 280px;
+    top: 150px;
+    
+    background: #FFFFFF;
+
+}
+#g{
+    position: absolute;
+    width: 38px;
+    height: 20px;
+    left: 475px;
+    top: 27px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #995D53;
+    
+}
+#gender{
+    position: absolute;
+width: 38px;
+height: 20px;
+left: 475px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+
+#d{
+    position: absolute;
+width: 58px;
+height: 20px;
+left: 277px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+#date{
+    
+position: absolute;
+width: 71px;
+height: 20px;
+left: 277px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#n{
+    position: absolute;
+width: 115px;
+height: 20px;
+left: 47px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#name{
+    position: absolute;
+width: 108px;
+height: 18px;
+left: 47px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+#e{
+    position: absolute;
+width: 29px;
+height: 20px;
+left: 550px;
+top: 27px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+text-align: right;
+text-decoration-line: underline;
+
+color: #995D53;
+
+}
+#edit{
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left: 550px;
+    top:27px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration-line: underline;
+    
+    color: #995D53;
+    }
+#t{
+    position: absolute;
+left: 590px;
+
+top: 20px;
+bottom: 50.33%;
+
+border: 2px solid #995D53;
+
+}
+#trash{
+    position: absolute;
+left: 590px;
+
+top: 20px;
+bottom: 50.33%;
+
+border: 2px solid #995D53;
+
+}
+.search{
+
+    position: absolute;
+    width: 626px;
+    height: 46px;
+    left: 280px;
+    top: 104px;
+    
+    background: #FFFFFF;
+}
+#search{
+    position: absolute;
+width: 406px;
+height: 42px;
+left: 37px;
+top: 0px;
+
+background: #d6d1d1;
+border: 1px solid #EEEEEE
+}
+#search1{
+    width:405px;
+    position: absolute;
+    top: 8px;
+}
 
 body{
     background-image: url("./Balloons.png");
-    background-color: #B57369;
+    background-color: #E1988C;
+}
+
+table{
+    position: absolute;
+    top:200px;
 }

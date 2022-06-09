@@ -7,34 +7,36 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <img src="./Balloons.png">
+        
         <h1>Staff Birthday Calendar</h1>
-        <fieldset style="width:700px">
+        
             <div class="titles">
-            <a>Name &#9662;</a>
-            <a>Birthday &#9662;</a>
-            <a>Gender &#9662;</a>
-            <form>
-                <input type="search" placeholder="Search a name, date or a wishlist item" style="width: 300px">
-            </form>
+            <a class="name">Name &#9662;</a>
+            <a class="birthday">Birthday &#9662;</a>
+            <a class="gender">Gender &#9662;</a>
+            </div>
+            
             <table>
-              <tr>
-                    <td>Frodo Baggins</td>
-                    <td>March 24</td>
-                    <td>Male</td>
-                    <td><a href="#"> edit</a></td>
-                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+                <tr  class="search">
+                    <td ><form id="search"><input type="search" id="search1" placeholder="Search a name, date or a wishlist item"></form></td>
+                </tr>
+              <tr  id="frodo">
+                    <td id="name">Frodo Baggins</td>
+                    <td id="date">March 24</td>
+                    <td id="gender">Male</td>
+                    <td id="edit"><a href="#"> edit</a></td>
+                    <td id="trash"><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
               </tr>
-              <tr>
-                    <td>Luke Skywalker</td>
-                    <td>April 26</td>
-                    <td>Male</td>
-                    <td><a href="#"> edit</a></td>
-                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+              <tr id="luke">
+                    <td id="n">Luke Skywalker</td>
+                    <td id="d">April 26</td>
+                    <td id="g">Male</td>
+                    <td id="e"><a href="#"> edit</a></td>
+                    <td id="t"><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
               </tr>
             </table>
             <form>
-                <fieldset style="max-width: 600px">
+                <fieldset class="fcard" style="max-width: 600px">
                     <div class="fname">
                         <label for="fname">First Name</label><br>
                         <input type="text" id="fname" placeholder="Johnny" name="fname"><br>
@@ -70,6 +72,6 @@
                 </div>
                 </fieldset>
             </form>
-        </fieldset>
+        
     </body>
 </html>
