@@ -94,7 +94,7 @@ top: 469px;
 background: #FFFFFF;
 border-radius: 0px 0px 20px 20px;
 }
-#luke{
+/* #luke{
     position: absolute;
     width: 626px;
     height: 60px;
@@ -112,188 +112,154 @@ border-radius: 0px 0px 20px 20px;
     
     background: #FFFFFF;
 
-}
-#g{
+} */
+#people{
     position: absolute;
-    width: 38px;
-    height: 20px;
-    left: 475px;
-    top: 27px;
-    
-    font-family: 'Euclid Circular B';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    
-    color: #995D53;
-    
+    top : 159px;
+    left:280px;
+    width: 626px;
+    height: 130px;
+    background: #FFFFFF;
 }
-#gender{
-    position: absolute;
-width: 38px;
-height: 20px;
-left: 475px;
-top: 27px;
-
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #995D53;
-
+tr{
+    height:50px;
 }
 
-#d{
-    position: absolute;
-width: 58px;
-height: 20px;
-left: 277px;
-top: 27px;
 
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #995D53;
-
-}
-#date{
-    
-position: absolute;
-width: 71px;
-height: 20px;
-left: 277px;
-top: 27px;
-
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #995D53;
-}
-#n{
-    position: absolute;
-width: 115px;
-height: 20px;
-left: 47px;
-top: 27px;
-
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #995D53;
-}
-#name{
-    position: absolute;
-width: 108px;
-height: 18px;
-left: 47px;
-top: 27px;
-
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-
-color: #995D53;
-
-}
-#e{
-    position: absolute;
-width: 29px;
-height: 20px;
-left: 550px;
-top: 27px;
-
-font-family: 'Euclid Circular B';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 20px;
-text-align: right;
-text-decoration-line: underline;
-
-color: #995D53;
-
-}
-#edit{
-    position: absolute;
-    width: 29px;
-    height: 20px;
-    left: 550px;
-    top:27px;
-    
-    font-family: 'Euclid Circular B';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: right;
-    text-decoration-line: underline;
-    
-    color: #995D53;
-    }
-#t{
-    position: absolute;
-left: 590px;
-
-top: 20px;
-bottom: 50.33%;
-
-border: 2px solid #995D53;
-
-}
-#trash{
-    position: absolute;
-left: 590px;
-
-top: 20px;
-bottom: 50.33%;
-
-border: 2px solid #995D53;
-
-}
 .search{
 
     position: absolute;
     width: 626px;
-    height: 46px;
+    height: 56px;
     left: 280px;
-    top: 104px;
+    top: 103px;
     
     background: #FFFFFF;
 }
 #search{
     position: absolute;
-width: 406px;
+width: 506px;
 height: 42px;
 left: 37px;
 top: 0px;
 
-background: #d6d1d1;
-border: 1px solid #EEEEEE
+background: #FFFFFF;
+border: 1px solid  #FFFFFF;
 }
 #search1{
-    width:405px;
     position: absolute;
-    top: 8px;
+    left: 30px;
+    top: 10px;
+    width: 382px;
+    height: 24px;
+    position: absolute;
+    font-family: 'Euclid Circular B';
+font-style: italic;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+    background: #F7F7F7;
+   
 }
 
 body{
     background-image: url("./Balloons.png");
     background-color: #E1988C;
 }
+#firstn{
+    position: absolute;
+width: 72px;
+height: 18px;
+
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+
+
+color: #B57369;
+
+}
+#lastn{
+    position: absolute;
+    width: 72px;
+    height:18px;
+    left: 220px;
+   top:0px;
+
+    font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #B57369;
+}
+#fname{
+    box-sizing: border-box;
+
+position: absolute;
+width: 125px;
+height: 24px;
+
+background: #F7F7F7;
+border: 1px solid #EEEEEE;
+border-radius: 5px;
+}
+#genders{
+    position: absolute;
+width: 50px;
+height: 18px;
+left: 462px;
+top: 7px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+
+
+color: #995D53;
+
+}
+#lname{
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 220px;
+    top: 20px;
+    width: 125px;
+    height: 24px;
+    
+    background: #F7F7F7;
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    }
+
+#male{
+    position: absolute;
+    left:30px;
+}
+.female{
+    position: absolute;
+    left: 55px;
+}
+#female{
+    position: absolute;
+    left: 95px;
+}
+/* #plus{
+position: absolute;
+top: 489px;
+left:286px;
+width:630px;
+background: #FFF;
+border-radius: 0px 0px 20px 20px;
+} */
 
 table{
     position: absolute;

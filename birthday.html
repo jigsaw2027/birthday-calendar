@@ -3,6 +3,8 @@
     <head>
         <title>Birthday Calendar</title>
         <meta charset="UTF_8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <link href="./birthday.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -16,62 +18,96 @@
             <a class="gender">Gender &#9662;</a>
             </div>
             
-            <table>
+            <table id="show">
+                
                 <tr  class="search">
                     <td ><form id="search"><input type="search" id="search1" placeholder="Search a name, date or a wishlist item"></form></td>
                 </tr>
-              <tr  id="frodo">
-                    <td id="name">Frodo Baggins</td>
-                    <td id="date">March 24</td>
-                    <td id="gender">Male</td>
-                    <td id="edit"><a href="#"> edit</a></td>
-                    <td id="trash"><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+                <tbody  id="people" style="vertical-align:center;">
+                  <tr>
+                    <td>&#160; &#160; &nbsp;&nbsp;&nbsp;&nbsp;Frodo Baggins&#160;&#160;  &#160;  &#160; &#160; &#160; &#160;&#160;  &#160; &#160;&#160; &#160;  &#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>&#160; March 24 &#160; &#160;&#160; &#160;  &#160;&#160;&#160;&#160;  &#160;&#160;&#160; &#160;&#160;   &#160;&#160; &#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>&#160;  &#160;&#160;Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td> <a href="#"> edit</a></td>
+                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+                  </tr>
+
+              <tr>
+                    <td>&#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp; Luke Skywalker&#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;  &#160;&#160;  &#160; &#160;&#160; &#160;  &#160; </td>
+                    <td>&#160; &#160; April 26&#160; &#160;&#160;&#160;  &#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;   &#160;&#160; &#160;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td>&#160; &#160;&#160; Male  </td>
+                    <td><a href="#"> edit</a></td>
+                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
               </tr>
-              <tr id="luke">
-                    <td id="n">Luke Skywalker</td>
-                    <td id="d">April 26</td>
-                    <td id="g">Male</td>
-                    <td id="e"><a href="#"> edit</a></td>
-                    <td id="t"><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
-              </tr>
+            </tbody>
             </table>
             <form>
                 <fieldset class="fcard" style="max-width: 600px">
                     <div class="fname">
-                        <label for="fname">First Name</label><br>
-                        <input type="text" id="fname" placeholder="Johnny" name="fname"><br>
+                        <label for="fname" id="firstn">First Name</label><br>
+                        <input type="text" id="fname" placeholder="Johnny"  required><br>
                     </div>
 
                     <div class="lname">
-                    <label for="lname">Last Name</label><br>
-                    <input type="text" id="lname" placeholder="Appleseed" name="lname"><br>
+                    <label for="lname" id="lastn">Last Name</label><br>
+                    <input type="text" id="lname" placeholder="Appleseed"  required><br>
                     </div>
 
-                    <div class="gender">
-                    <label for="gender">Gender</label><br>
+                    <div id="genders">
+                    <label for="gender">Gender:</label><br>
                     <label for="male">Male</label>
-                    <input type="radio" id="male" value="gender" name="gender">
-                    <label for="female">Female</label>
-                    <input type="radio" id="female" value="gender" name="gender">
+                    <input type="radio" id="male" value="gender" required>
+                    <label for="female" class="female">Female</label>
+                    <input type="radio" id="female" value="gender" required>
                     </div>
                     <div class="date">
                         <label for="date">Date Of Birth</label><br>
-                        <input type="date" id="date" value="date"><br>
+                        <input type="date" id="date" value="date" required><br>
                     </div>
                     <div class="password">
                         <label for="password">Password</label><br>
-                        <input type="password" id="password" value="password"><br>
+                        <input type="password" id="password"  required><br>
                     </div>
                     <div class="wishlist">
                         <label for="wishlist" id="wishlist">Wishlist</label><br>
-                        <textarea input type="textarea" id="wishlist" value="wishlist" placeholder="Roses,Lavender,blah blah..."></textarea>
+                        <textarea input type="textarea" id="wishlist" value="wishlist" placeholder="Roses,Lavender,blah blah..." required></textarea>
                     </div>
                     <div class="buttons">
-                    <input type="button" value="Cancel" name="cancel">
-                    <input type="button" value="Ok" name="Ok">
+                    <button type="reset">Cancel</button>
+                    <input type="button" value="Ok" onClick="myFunction()"></input>
                 </div>
                 </fieldset>
             </form>
-        
+
+            <!-- <button type="submit" onClick="myFunction()" id="plus">+</button> -->
+
+        <script>
+            let list1=[];
+            let list2=[];
+            let list3=[];
+
+            let n=1;
+            let x=0;
+
+            function myFunction(){
+            const myFunc= document.getElementsById("show");
+            let newRow= myFunc.insertRow(n);
+
+            list1[x]= document.getElementById("fname","lname").value;
+            list2[x]= document.getElementById("date").value;
+            list3[x]= document.getElementById("genders").value;
+
+            let cel1= newRow.insertCell(0);
+            let cel2= newRow.insertCell(1);
+            let cel3= newRow.insertCell(2);
+
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            cel3.innerHTML = list3[x];
+
+            n++;
+            x++;
+            }
+        </script>
     </body>
 </html>
