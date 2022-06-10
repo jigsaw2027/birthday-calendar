@@ -94,25 +94,6 @@ top: 469px;
 background: #FFFFFF;
 border-radius: 0px 0px 20px 20px;
 }
-/* #luke{
-    position: absolute;
-    width: 626px;
-    height: 60px;
-    left: 280px;
-    top: 209px;
-    
-    background: #FFFFFF;
-}
-#frodo{
-    position: absolute;
-    width: 626px;
-    height: 60px;
-    left: 280px;
-    top: 150px;
-    
-    background: #FFFFFF;
-
-} */
 #people{
     position: absolute;
     top : 159px;
@@ -120,9 +101,21 @@ border-radius: 0px 0px 20px 20px;
     width: 626px;
     height: 130px;
     background: #FFFFFF;
+  
+
 }
 tr{
     height:50px;
+}
+
+td{
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #995D53;
 }
 
 
@@ -170,6 +163,7 @@ body{
     position: absolute;
 width: 72px;
 height: 18px;
+top:20px;
 
 
 font-family: 'Euclid Circular B';
@@ -188,7 +182,7 @@ color: #B57369;
     width: 72px;
     height:18px;
     left: 220px;
-   top:0px;
+   top:20px;
 
     font-family: 'Euclid Circular B';
 font-style: normal;
@@ -198,6 +192,31 @@ line-height: 18px;
 color: #B57369;
 }
 #fname{
+    box-sizing: border-box;
+
+position: absolute;
+width: 125px;
+height: 24px;
+top:40px;
+
+background: #F7F7F7;
+border: 1px solid #EEEEEE;
+border-radius: 5px;
+}
+#d{
+    font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+
+
+color: #995D53;
+
+}
+
+#date{
     box-sizing: border-box;
 
 position: absolute;
@@ -213,7 +232,7 @@ border-radius: 5px;
 width: 50px;
 height: 18px;
 left: 462px;
-top: 7px;
+top: 20px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -231,10 +250,10 @@ color: #995D53;
 
     position: absolute;
     left: 220px;
-    top: 20px;
+    top: 40px;
     width: 125px;
     height: 24px;
-    
+
     background: #F7F7F7;
     border: 1px solid #EEEEEE;
     border-radius: 5px;
@@ -251,6 +270,88 @@ color: #995D53;
 #female{
     position: absolute;
     left: 95px;
+}
+.wishlist{
+    position: absolute;
+    left:220px;
+    top:100px;
+    font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+
+
+
+color: #995D53;
+}
+#wishlist{
+    width: 320px;
+    height:80px;
+    background: #F7F7F7;
+border: 1px solid #EEEEEE;
+border-radius: 5px;
+}
+#p{
+    position: absolute;
+    top:140px;
+    font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #995D53;
+
+}
+#password{
+    position:absolute;
+    top:160px;
+    width:120px;
+    background: #F7F7F7;
+border: 1px solid #EEEEEE;
+border-radius: 5px;
+}
+.buttons{
+    position:absolute;
+    top:220px;
+    left:450px;
+}
+#ok{
+    position:absolute;
+    left:5px;
+width:100px;
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+    color: #FFFFFF;
+    box-sizing: border-box;
+    background: #B57369;
+border: 1px solid #995D53;
+border-radius: 5px;
+}
+
+#cancel{
+    position:absolute;
+    right:0px;
+    width:100px;
+    font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+    box-sizing: border-box;
+    background: #F7F7F7;
+border: 1px solid #EEEEEE;
+border-radius: 5px;
 }
 /* #plus{
 position: absolute;

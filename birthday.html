@@ -18,30 +18,10 @@
             <a class="gender">Gender &#9662;</a>
             </div>
             
-            <table id="show">
-                
-                <tr  class="search">
-                    <td ><form id="search"><input type="search" id="search1" placeholder="Search a name, date or a wishlist item"></form></td>
-                </tr>
-                <tbody  id="people" style="vertical-align:center;">
-                  <tr>
-                    <td>&#160; &#160; &nbsp;&nbsp;&nbsp;&nbsp;Frodo Baggins&#160;&#160;  &#160;  &#160; &#160; &#160; &#160;&#160;  &#160; &#160;&#160; &#160;  &#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&#160; March 24 &#160; &#160;&#160; &#160;  &#160;&#160;&#160;&#160;  &#160;&#160;&#160; &#160;&#160;   &#160;&#160; &#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&#160;  &#160;&#160;Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td> <a href="#"> edit</a></td>
-                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
-                  </tr>
+            
 
-              <tr>
-                    <td>&#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp; Luke Skywalker&#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;  &#160;&#160;  &#160; &#160;&#160; &#160;  &#160; </td>
-                    <td>&#160; &#160; April 26&#160; &#160;&#160;&#160;  &#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;   &#160;&#160; &#160;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td>&#160; &#160;&#160; Male  </td>
-                    <td><a href="#"> edit</a></td>
-                    <td><a href="#"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
-              </tr>
-            </tbody>
-            </table>
             <form>
+                
                 <fieldset class="fcard" style="max-width: 600px">
                     <div class="fname">
                         <label for="fname" id="firstn">First Name</label><br>
@@ -56,27 +36,50 @@
                     <div id="genders">
                     <label for="gender">Gender:</label><br>
                     <label for="male">Male</label>
-                    <input type="radio" id="male" value="gender" required>
+                    <input type="radio" id="male" name="gender" value="gender" required>
                     <label for="female" class="female">Female</label>
-                    <input type="radio" id="female" value="gender" required>
+                    <input type="radio" id="female"name="gender" value="gender" required>
                     </div>
                     <div class="date">
-                        <label for="date">Date Of Birth</label><br>
-                        <input type="date" id="date" value="date" required><br>
+                        <label for="date" id="d">Date Of Birth</label><br>
+                        <input type="date" id="date" placeholder="mm/dd/yyyy" required><br>
                     </div>
                     <div class="password">
-                        <label for="password">Password</label><br>
+                        <label for="password" id="p">Password</label><br>
                         <input type="password" id="password"  required><br>
                     </div>
                     <div class="wishlist">
-                        <label for="wishlist" id="wishlist">Wishlist</label><br>
+                        <label for="wishlist" id="wish">Wishlist</label><br>
                         <textarea input type="textarea" id="wishlist" value="wishlist" placeholder="Roses,Lavender,blah blah..." required></textarea>
                     </div>
                     <div class="buttons">
-                    <button type="reset">Cancel</button>
-                    <input type="button" value="Ok" onClick="myFunction()"></input>
+                    <button type="reset" id="cancel">Cancel</button>
+                    <input type="submit" id="ok" value="Ok" onClick="myFunction()">
                 </div>
                 </fieldset>
+                <table id="show">
+                
+                    <tr  class="search">
+                        <td ><form id="search"><input type="search" id="search1" placeholder="&#128269;Search a name, date or a wishlist item"></form></td>
+                    </tr>
+                    <tbody  id="people" style="vertical-align:center;">
+                      <tr>
+                        <td>&#160; &#160; &nbsp;&nbsp;&nbsp;&nbsp;Frodo Baggins&#160;&#160;  &#160;  &#160; &#160; &#160; &#160;&#160;  &#160; &#160;&#160; &#160;  &#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>&#160; March 24 &#160; &#160;&#160; &#160;  &#160;&#160;&#160;&#160;  &#160;&#160;&#160; &#160;&#160;   &#160;&#160; &#160;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>&#160;  &#160;&#160;Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td> <a href="#"id="edit"> Edit</a></td>
+                        <td><a href="#" id="delete"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+                      </tr>
+    
+                  <tr>
+                        <td>&#160;&#160;  &nbsp;&nbsp;&nbsp;&nbsp; Luke Skywalker&#160; &#160; &#160; &#160; &#160; &#160; &#160;&#160;  &#160;&#160;  &#160; &#160;&#160; &#160;  &#160; </td>
+                        <td>&#160; &#160; April 26&#160; &#160;&#160;&#160;  &#160;&#160;&#160;&#160;&#160;&#160; &#160; &#160;   &#160;&#160; &#160;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>&#160; &#160;&#160; Male  </td>
+                        <td><a href="#" id="edit"> Edit</a></td>
+                        <td><a href="#" id="delete"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
+                  </tr>
+                </tbody>
+                </table>
             </form>
 
             <!-- <button type="submit" onClick="myFunction()" id="plus">+</button> -->
@@ -96,14 +99,20 @@
             list1[x]= document.getElementById("fname","lname").value;
             list2[x]= document.getElementById("date").value;
             list3[x]= document.getElementById("genders").value;
+            // list4[x]=document.getElementById("edit").value;
+            // list5[x]=document.getElementById("delete").value
 
             let cel1= newRow.insertCell(0);
             let cel2= newRow.insertCell(1);
             let cel3= newRow.insertCell(2);
+            // let cel4=newRow.insertCell(3);
+            // let cel5=newRow.insertCell(4);
 
             cel1.innerHTML = list1[x];
             cel2.innerHTML = list2[x];
             cel3.innerHTML = list3[x];
+            // cel4.innerHTML = list4[x];
+            // cel5.innerHTML = list5[x];
 
             n++;
             x++;
