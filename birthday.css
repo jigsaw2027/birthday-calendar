@@ -14,8 +14,8 @@
     position: absolute;
 width: 58px;
 height: 25px;
-left: 47px;
-top: 15px;
+left: 307px;
+top: 70px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -30,8 +30,8 @@ color: #FFFFFF;
     position: absolute;
 width: 82px;
 height: 25px;
-left: 277px;
-top: 15px;
+left: 490px;
+top: 70px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -45,8 +45,8 @@ color: #FFFFFF;
 .gender{position: absolute;
 width: 71px;
 height: 25px;
-left: 470px;
-top: 15px;
+left: 735px;
+top: 70px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -124,8 +124,8 @@ td{
     position: absolute;
     width: 626px;
     height: 56px;
-    left: 280px;
-    top: 103px;
+    left: 287px;
+    top: 303px;
     
     background: #FFFFFF;
 }
@@ -259,7 +259,7 @@ color: #995D53;
     border-radius: 5px;
     }
 
-#male{
+.males{
     position: absolute;
     left:30px;
 }
@@ -267,7 +267,7 @@ color: #995D53;
     position: absolute;
     left: 55px;
 }
-#female{
+.females{
     position: absolute;
     left: 95px;
 }
