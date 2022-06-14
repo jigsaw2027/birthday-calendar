@@ -19,6 +19,7 @@
     </style>
     <h1>Staff Birthday Calendar</h1>
     <div class="container">
+        <input type="search" id="search1" placeholder="&#128269;Search a name, date or a wishlist item">
         <div class="titles">
             <table id="show" border="1">
                 <tr>
@@ -26,6 +27,7 @@
                     <th class="birthday">Birthday&#9662;</th>
                     <th colspan="2" class="gender">Gender &#9662;</th>
                 </tr>
+              
                 <tr>
                     <td>Frodo Baggins</td>
                     <td>March 24</td>
@@ -40,21 +42,47 @@
         </div>
         <div class="tab">
             <fieldset class="fcard">
-            <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny"><br></div>
-            <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed"><br></div>
-            <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy"><br>
+            <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny" onclick="rowToInput();"><br></div>
+            <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed" onclick="rowToInput();"><br></div>
+            <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy"  onclick="rowToInput();"><br>
             <label id="genders">Gender </label><br>
-            <label class="male">male</label><input type="radio" name="male" id="male">
+            <label class="male">male</label><input type="radio" name="male" id="male"  onclick="rowToInput();">
             <label class="female">Female</label><input type="radio" name="female" id="female"></div><br>
             <div class="password"><label id="p">Password</label><br><input type="password" name="password" id="password"><br></div>
             <div class="wishlist"><label id="wish">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist"></textarea><br></div>
-            <div class="buttons"><button type="submit" onClick="addTableRow()" id="ok">Ok</button>
+            <div class="buttons"><button type="submit" name="ok" onClick="addTableRow()" id="ok"<a href="#plus"></a>Ok</button>
             <button type="reset" id="cancel">Cancel</button></div>
-            <button type="edit" id="edit" onClick="editTableRow();">Edit</button>
-            <button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button>
+            
         </fieldset>
         </div>
    
+    </div>
+
+    <div class="board2">
+        <div class="titles">
+            <table id="show" border="1">
+                <tr>
+                    <th class="name">Name &#9662;</th>
+                    <th class="birthday">Birthday&#9662;</th>
+                    <th colspan="3" class="gender">Gender &#9662;</th>
+                </tr>
+                <tr>
+                    <td>Frodo Baggins</td>
+                    <td>March 24</td>
+                    <td>Male</td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+            <td><button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+                </tr>
+                <tr>
+                    <td>Luke Skywalker</td>
+                    <td>April 26</td>
+                    <td>Male</td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+                    <td> <button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+                </tr>
+            </table>
+    </div>
+    <button type="submit" name="plus" onClick="myFunction()" id="plus"<a href="#ok"></a>+</button>
     </div>
                     <script>
 var rowIndex,table = document.getElementById("show");
