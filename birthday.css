@@ -1,21 +1,20 @@
+
 .titles{
     position: absolute;
-    width: 626px;
-    height: 51px;
-    left: 287px;
-    top: 252px;
-    
-    background: #B57369;
-    border-radius: 20px 20px 0px 0px;
+width: 626px;
+height: 51px;
+left: 300px;
+top: 250px;
 
-
+background: #B57369;
+border-radius: 20px 20px 0px 0px;
 }
 .name{
     position: absolute;
 width: 58px;
 height: 25px;
-left: 307px;
-top: 70px;
+left: 57px;
+bottom: 260px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -30,8 +29,8 @@ color: #FFFFFF;
     position: absolute;
 width: 82px;
 height: 25px;
-left: 490px;
-top: 70px;
+left: 255px;
+bottom: 260px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -45,8 +44,8 @@ color: #FFFFFF;
 .gender{position: absolute;
 width: 71px;
 height: 25px;
-left: 735px;
-top: 70px;
+left: 500px;
+bottom: 260px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -79,7 +78,7 @@ font-style: normal;
 font-weight: 700;
 font-size: 70px;
 line-height: 89px;
-/* identical to box height */
+
 
 
 color: #FFFFFF;
@@ -88,8 +87,8 @@ color: #FFFFFF;
     position: absolute;
 width: 1080px;
 height: 305px;
-left: 285px;
-top: 469px;
+left:  300px;
+top: 409px;
 
 background: #FFFFFF;
 border-radius: 0px 0px 20px 20px;
@@ -109,13 +108,17 @@ tr{
 }
 
 td{
+    position: absolute;
+    top:0px;
+    left: 0px;
     font-family: 'Euclid Circular B';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     
-    color: #995D53;
+    color: #000;
+    background:#FFFFFF;
 }
 
 
@@ -124,8 +127,8 @@ td{
     position: absolute;
     width: 626px;
     height: 56px;
-    left: 287px;
-    top: 303px;
+    left: 300px;
+    bottom: 310px;
     
     background: #FFFFFF;
 }
@@ -133,8 +136,8 @@ td{
     position: absolute;
 width: 506px;
 height: 42px;
-left: 37px;
-top: 0px;
+left: 7px;
+top: 2px;
 
 background: #FFFFFF;
 border: 1px solid  #FFFFFF;
@@ -300,7 +303,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 18px;
-/* identical to box height */
+
 
 
 color: #995D53;
@@ -353,14 +356,7 @@ color: #995D53;
 border: 1px solid #EEEEEE;
 border-radius: 5px;
 }
-/* #plus{
-position: absolute;
-top: 489px;
-left:286px;
-width:630px;
-background: #FFF;
-border-radius: 0px 0px 20px 20px;
-} */
+
 
 table{
     position: absolute;

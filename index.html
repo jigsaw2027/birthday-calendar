@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>birthday</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Staff Birthday Calendar</h1>
+    <div class="container">
+        <div class="titles">
+            <table id="show" border="1">
+                <tr>
+                    <th class="name">Name &#9662;</th>
+                    <th class="birthday">Birthday&#9662;</th>
+                    <th colspan="2" class="gender">Gender &#9662;</th>
+                </tr>
+                <tr>
+                    <td>Frodo Baggins</td>
+                    <td>March 24</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Luke Skywalker</td>
+                    <td>April 26</td>
+                    <td>Male</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab">
+            <fieldset class="fcard">
+            <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny"><br></div>
+            <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed"><br></div>
+            <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy"><br>
+            <label id="genders">Gender </label><br>
+            <label class="male">male</label><input type="radio" name="male" id="male">
+            <label class="female">Female</label><input type="radio" name="female" id="female"></div><br>
+            <div class="password"><label id="p">Password</label><br><input type="password" name="password" id="password"><br></div>
+            <div class="wishlist"><label id="wish">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist"></textarea><br></div>
+            <div class="buttons"><button type="submit" onClick="addTableRow()" id="ok">Ok</button>
+            <button type="reset" id="cancel">Cancel</button></div>
+            <button type="edit" id="edit" onclick="editTableRow();">Edit</button>
+            <button type="delete" id="delete"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button>
+        </fieldset>
+        </div>
+   
+    </div>
+                    <script>
+var rowIndex,table = document.getElementById("show");
+                        function addTableRow(){
+                            
+                            var table =document.getElementById("show");
+                            newRow=table.insertRow(table.length);
+                            cell1 = newRow.insertCell(0),
+                            cell2 = newRow.insertCell(1),
+                            cell3 = newRow.insertCell(2);
+                            cell4=newRow.insertCell(3);
+                            cell5=newRow.insertCell(4);
+                            var name=document.getElementById("fname").value+" ";
+                            name+=document.getElementById("lname").value;
+                            date= document.getElementById("date").value;
+                            gender= document.getElementById("male").value;
+                            edit= document.getElementById("edit").value;
+                            del= document.getElementById("delete").value;
+                          
+                            cell1.innerHTML = name;
+                            cell2.innerHTML= date;
+                            cell3.innerHTML = gender;
+                            cell4.innerHTML= edit;
+                            cell5.innerHTML=del;
+            
+                        }
+                        addTableRow();
+                          function rowToInput(){
+                
+                for (var i=1;i<table.rows.length;i++){
+                    table.rows[i].onClick=function(){
+                        rowIndex = this.rIndex;
+                       this.name= document.getElementById("fname").value+document.getElementById("lname") ;
+                       name=this.cells[0].innerHTML;
+                       document.getElementById("date")=this.cells[1].innerHTML;
+                       document.getElementById("male")=this.cells[2].innerHTML;
+                    };
+                }
+            }
+            rowToInput();
+
+            function editTableRow(){
+                var name= document.getElementById('fname').value;
+                name+= document.getElementById('lname').value;
+                date= document.getElementById("date").value;
+                gender=document.getElementById("gender").value;
+                table.rows[rowIndex].cells[0].innerHTML = name;
+                table.rows[rowIndex].cells[1].innerHTML = date;
+                table.rows[rowIndex].cells[2].innerHTML = gender;
+            }
+            editTableRow();
+                        </script>
+</body>
+</html>
