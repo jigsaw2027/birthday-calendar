@@ -66,8 +66,9 @@
             </table>
         </div>
         <div class="tab">
-            <fieldset class="fcard">
-            <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny" onclick="rowToInput();"><br></div>
+            <!-- <fieldset class="fcard"> -->
+                <form id="input_form">
+                    <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny" onclick="rowToInput();"><br></div>
             <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed" onclick="rowToInput();"><br></div>
             <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy"  onclick="rowToInput();"><br>
             <label id="genders">Gender </label><br>
@@ -77,8 +78,9 @@
             <div class="wishlist"><label id="wish">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist"></textarea><br></div>
             <div class="buttons"><button type="submit" name="ok" onClick="addTableRow()" id="ok"<a href="#plus"></a>Ok</button>
             <button type="reset" id="cancel">Cancel</button></div>
-            
-        </fieldset>
+        </form>
+
+        <!-- </fieldset> -->
         </div>
    
     </div>
@@ -89,8 +91,11 @@ var rowIndex,table = document.getElementById("show");
 var name=document.getElementById("fname").value+" ";
     name+=document.getElementById("lname").value;
 
-    var form=document.getElementById("fcard")
+    var form=document.getElementById("input_form")
 var list=document.getElementById("list");
+
+
+
 
                         function checkEmpty(){
                             let isEmpty=false;
@@ -101,28 +106,31 @@ var list=document.getElementById("list");
                 password=document.getElementById("password").value,
                 wishlist=document.getElementById("wishlist").value;
 
-               if(fname===""){
-                alert("First Name must be filled");
-                isEmpty=true;
-               }else if(lname===""){
-                alert("last Name must be filled");
-                isEmpty=true;
-               }else if(date===""){
-                alert("date is empty");
-                isEmpty=true;
-               }else if(gender===null){
-                alert("select a gender");
-                isEmpty=true;
-               }else if(password===""){
-                alert("Enter Password");
-                isEmpty=true;
-               }else if(wishlist===""){
-                alert("wishlist is empty");
-                isEmpty=true;
-               }return isEmpty;
-                
+                        if(fname===""){
+                            alert("First Name must be filled");
+                            isEmpty=true;
+                        }else if(lname===""){
+                            alert("last Name must be filled");
+                            isEmpty=true;
+                        }else if(date===""){
+                            alert("date is empty");
+                            isEmpty=true;
+                        }else if(gender===null){
+                            alert("select a gender");
+                            isEmpty=true;
+                        }else if(password===""){
+                            alert("Enter Password");
+                            isEmpty=true;
+                        }else if(wishlist===""){
+                            alert("wishlist is empty");
+                            isEmpty=true;
+                        }return isEmpty;
+                            
 
                 }
+
+
+
 
                         function addTableRow(){
                             if(!checkEmpty())
@@ -142,7 +150,8 @@ var list=document.getElementById("list");
                             cell3.innerHTML = gender;
                            
                             rowToInput();
-                        }
+                    }
+
                         addTableRow();
 
 
@@ -152,16 +161,17 @@ var list=document.getElementById("list");
                 for (var i=1;i<table.rows.length;i++){
                     table.rows[i].onClick=function(){
                         rowIndex = this.rowIndex;
-                      name=this.cell[0].innerHTML;
-                       document.getElementById("date")=this.cell[1].innerHTML;
-                       document.getElementById("male")=this.cell[2].innerHTML;
+                    var inputValue= document.getElementById("fname").value;
+                     
                     };
                 }
+                console.log(inputValue);
                 form.reset();
 
-                document.getElementById("list").innerHTML +="<td>"+ name +"</td>" +"<td>"+date+"</td>"+"<td>"+gender+"</td>";
+                document.getElementById("list").innerHTML +="<td>"+ inputValue +"</td>" 
             }
-            rowToInput();
+            form.addEventListener("ok",rowToInput,false);
+          
 
             function editTableRow(){
                 var name= document.getElementById('fname').value;
