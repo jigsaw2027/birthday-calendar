@@ -18,16 +18,41 @@
         tr:hover{background-color: #EEE;}
     </style>
     <h1>Staff Birthday Calendar</h1>
-    <div class="container">
-        <input type="search" id="search1" placeholder="&#128269;Search a name, date or a wishlist item">
+    <div class="board2">
         <div class="titles">
             <table id="show" border="1">
+                <tr id="list">
+                    <th class="name">Name &#9662;</th>
+                    <th class="birthday">Birthday&#9662;</th>
+                    <th colspan="3" class="gender">Gender &#9662;</th>
+                </tr>
                 <tr>
+                    <td>Frodo Baggins</td>
+                    <td>March 24</td>
+                    <td>Male</td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+            <td><button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+                </tr>
+                <tr>
+                    <td>Luke Skywalker</td>
+                    <td>April 26</td>
+                    <td>Male</td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+                    <td> <button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+                </tr>
+            </table>
+    </div>
+    <button type="submit" name="plus" onClick="myFunction()" id="plus"<a href="#ok"></a>+</button>
+    </div>
+
+    <div class="container">
+        <div class="titles">
+            <table id="show" border="1">
+                <tr id="list">
                     <th class="name">Name &#9662;</th>
                     <th class="birthday">Birthday&#9662;</th>
                     <th colspan="2" class="gender">Gender &#9662;</th>
                 </tr>
-              
                 <tr>
                     <td>Frodo Baggins</td>
                     <td>March 24</td>
@@ -58,36 +83,15 @@
    
     </div>
 
-    <div class="board2">
-        <div class="titles">
-            <table id="show" border="1">
-                <tr>
-                    <th class="name">Name &#9662;</th>
-                    <th class="birthday">Birthday&#9662;</th>
-                    <th colspan="3" class="gender">Gender &#9662;</th>
-                </tr>
-                <tr>
-                    <td>Frodo Baggins</td>
-                    <td>March 24</td>
-                    <td>Male</td>
-                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
-            <td><button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
-                </tr>
-                <tr>
-                    <td>Luke Skywalker</td>
-                    <td>April 26</td>
-                    <td>Male</td>
-                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
-                    <td> <button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
-                </tr>
-            </table>
-    </div>
-    <button type="submit" name="plus" onClick="myFunction()" id="plus"<a href="#ok"></a>+</button>
-    </div>
+ 
                     <script>
 var rowIndex,table = document.getElementById("show");
 var name=document.getElementById("fname").value+" ";
-                            name+=document.getElementById("lname").value;
+    name+=document.getElementById("lname").value;
+
+    var form=document.getElementById("fcard")
+var list=document.getElementById("list");
+
                         function checkEmpty(){
                             let isEmpty=false;
                             var fname= document.getElementById('fname').value,
@@ -140,8 +144,11 @@ var name=document.getElementById("fname").value+" ";
                             rowToInput();
                         }
                         addTableRow();
-                          function rowToInput(){
-                
+
+
+                          function rowToInput(event){
+                event.preventDefault;
+
                 for (var i=1;i<table.rows.length;i++){
                     table.rows[i].onClick=function(){
                         rowIndex = this.rowIndex;
@@ -150,6 +157,9 @@ var name=document.getElementById("fname").value+" ";
                        document.getElementById("male")=this.cell[2].innerHTML;
                     };
                 }
+                form.reset();
+
+                document.getElementById("list").innerHTML +="<td>"+ name +"</td>" +"<td>"+date+"</td>"+"<td>"+gender+"</td>";
             }
             rowToInput();
 
@@ -164,16 +174,12 @@ var name=document.getElementById("fname").value+" ";
             }
             editTableRow();
 
-            function deleteSelRow(){
-                table.deleteRow(rowIndex);
-
-
-                name.value="";
-       document.getElementById("date").value="";
-              document.getElementById("male").value="";
-            
+            function removeItem(e){
+                var target=e.target;
+                if(target.tagName !== 'TD')return;
+                target.parentNode.removeChild(target);
             }
-            
+list.addEventListener('click',removeItem);
                         </script>
 </body>
 </html>
