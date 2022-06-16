@@ -21,7 +21,7 @@
     <div class="board2">
         <div class="titles">
             <table id="show" border="1">
-                <tr id="list">
+                <tr id="del">
                     <th class="name">Name &#9662;</th>
                     <th class="birthday">Birthday&#9662;</th>
                     <th colspan="3" class="gender">Gender &#9662;</th>
@@ -30,25 +30,25 @@
                     <td>Frodo Baggins</td>
                     <td>March 24</td>
                     <td>Male</td>
-                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();" href="#ok"></>Edit</button></td>
             <td><button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
                 </tr>
                 <tr>
                     <td>Luke Skywalker</td>
                     <td>April 26</td>
                     <td>Male</td>
-                    <td><button type="edit" id="edit" onClick="editTableRow();"<a href="#ok"></a>Edit</button></td>
+                    <td><button type="edit" id="edit" onClick="editTableRow();" href="#ok"></>Edit</button></td>
                     <td> <button type="delete" id="delete" onClick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
                 </tr>
             </table>
     </div>
-    <button type="submit" name="plus" onClick="myFunction()" id="plus"<a href="#ok"></a>+</button>
+    <button type="submit" name="plus" onClick="myFunction()" id="plus" href="#ok">+</button>
     </div>
 
     <div class="container">
         <div class="titles">
             <table id="show" border="1">
-                <tr id="list">
+                <tr>
                     <th class="name">Name &#9662;</th>
                     <th class="birthday">Birthday&#9662;</th>
                     <th colspan="2" class="gender">Gender &#9662;</th>
@@ -66,71 +66,62 @@
             </table>
         </div>
         <div class="tab">
-            <!-- <fieldset class="fcard"> -->
-                <form id="input_form">
-                    <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny" onclick="rowToInput();"><br></div>
-            <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed" onclick="rowToInput();"><br></div>
-            <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy"  onclick="rowToInput();"><br>
+            <fieldset class="fcard">
+            <div class="fname"><label id="firstn">First Name</label><br><input type="text" name="fname" id="fname" placeholder="Johnny"> <br></div>
+            <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed"> <br></div>
+            <div class="date"><label id="d">Date of Birth</label><br><input type="date" name="date" id="date" placeholder="mm/dd/yyyy">  <br>
             <label id="genders">Gender </label><br>
-            <label class="male">male</label><input type="radio" name="male" id="male"  onclick="rowToInput();">
-            <label class="female">Female</label><input type="radio" name="female" id="female"></div><br>
+            <label class="male">male</label><input type="radio" name="gender" id="male"  >
+            <label class="female">Female</label><input type="radio" name="gender" id="female"></div><br>
             <div class="password"><label id="p">Password</label><br><input type="password" name="password" id="password"><br></div>
             <div class="wishlist"><label id="wish">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist"></textarea><br></div>
-            <div class="buttons"><button type="submit" name="ok" onClick="addTableRow()" id="ok"<a href="#plus"></a>Ok</button>
+            <div class="buttons"><button type="submit" name="ok" onClick="addTableRow()" id="ok" href="#plus"></>Ok</button>
             <button type="reset" id="cancel">Cancel</button></div>
-        </form>
-
-        <!-- </fieldset> -->
+            
+        </fieldset>
         </div>
    
     </div>
 
  
                     <script>
-var rowIndex,table = document.getElementById("show");
+var rIndex,table = document.getElementById("show");
+var del= document.getElementById("del");
 var name=document.getElementById("fname").value+" ";
-    name+=document.getElementById("lname").value;
-
-    var form=document.getElementById("input_form")
-var list=document.getElementById("list");
-
-
-
-
+                            name+=document.getElementById("lname").value;
                         function checkEmpty(){
                             let isEmpty=false;
                             var fname= document.getElementById('fname').value,
                 lname= document.getElementById('lname').value,
                  date= document.getElementById("date").value,
                 gender=document.getElementById("male").value,
+                dele=document.getElementById("delete").value,
+                ed=document.getElementById("edit").value,
                 password=document.getElementById("password").value,
                 wishlist=document.getElementById("wishlist").value;
 
-                        if(fname===""){
-                            alert("First Name must be filled");
-                            isEmpty=true;
-                        }else if(lname===""){
-                            alert("last Name must be filled");
-                            isEmpty=true;
-                        }else if(date===""){
-                            alert("date is empty");
-                            isEmpty=true;
-                        }else if(gender===null){
-                            alert("select a gender");
-                            isEmpty=true;
-                        }else if(password===""){
-                            alert("Enter Password");
-                            isEmpty=true;
-                        }else if(wishlist===""){
-                            alert("wishlist is empty");
-                            isEmpty=true;
-                        }return isEmpty;
-                            
+               if(fname===""){
+                alert("First Name must be filled");
+                isEmpty=true;
+               }else if(lname===""){
+                alert("last Name must be filled");
+                isEmpty=true;
+               }else if(date===""){
+                alert("date is empty");
+                isEmpty=true;
+               }else if(gender===null){
+                alert("select a gender");
+                isEmpty=true;
+               }else if(password===""){
+                alert("Enter Password");
+                isEmpty=true;
+               }else if(wishlist===""){
+                alert("wishlist is empty");
+                isEmpty=true;
+               }return isEmpty;
+                
 
                 }
-
-
-
 
                         function addTableRow(){
                             if(!checkEmpty())
@@ -140,56 +131,64 @@ var list=document.getElementById("list");
                             cell1 = newRow.insertCell(0),
                             cell2 = newRow.insertCell(1),
                             cell3 = newRow.insertCell(2);
+                            cell4=newRow.insertCell(3);
+                            cell5=newRow.insertCell(4);
                             var name=document.getElementById("fname").value+" ";
                             name+=document.getElementById("lname").value;
                             date= document.getElementById("date").value;
                             gender= document.getElementById("male").value;
+                            ed=document.getElementById("edit").value;
+                            dele=document.getElementById("delete").value;
 
                             cell1.innerHTML = name;
                             cell2.innerHTML= date;
                             cell3.innerHTML = gender;
+                            cell4.innerHTML=ed;
+                            cell5.innerHTML=dele;
                            
                             rowToInput();
-                    }
-
+                            console.log(rowToInput());
+                        }
                         addTableRow();
-
-
-                          function rowToInput(event){
-                event.preventDefault;
-
+                          function rowToInput(){
+                
                 for (var i=1;i<table.rows.length;i++){
                     table.rows[i].onClick=function(){
-                        rowIndex = this.rowIndex;
-                    var inputValue= document.getElementById("fname").value;
-                     
+                        rIndex = this.parentElement.rowIndex;
+                      name=this.cell[0].innerHTML;
+                       document.getElementById("date")=this.cell[1].innerHTML;
+                       document.getElementById("male")=this.cell[2].innerHTML;
                     };
                 }
-                console.log(inputValue);
-                form.reset();
-
-                document.getElementById("list").innerHTML +="<td>"+ inputValue +"</td>" 
             }
-            form.addEventListener("ok",rowToInput,false);
-          
+            rowToInput();
 
             function editTableRow(){
                 var name= document.getElementById('fname').value;
                 name+= document.getElementById('lname').value;
                 var date= document.getElementById("date").value,
                 gender=document.getElementById("male").value;
-                table.rows[rowIndex].cell1.innerHTML = name;
-                table.rows[rowIndex].cell2.innerHTML = date;
-                table.rows[rowIndex].cell3.innerHTML = gender;
+                table.rows[rIndex].cell1.innerHTML = name;
+                table.rows[rIndex].cell2.innerHTML = date;
+                table.rows[rIndex].cell3.innerHTML = gender;
             }
             editTableRow();
 
-            function removeItem(e){
-                var target=e.target;
-                if(target.tagName !== 'TD')return;
-                target.parentNode.removeChild(target);
+            function deleteSelRow(){
+                
+                for (var i=1;i<table.rows.length;i++){
+        table.rows[i].cells[4].onclick=function(){
+            rIndex=this.parentElement.rowIndex;
+            table.deleteRow(rIndex);
+            console.log(rIndex);
+        };
+        
+    }
+
+              
+            
             }
-list.addEventListener('click',removeItem);
+            
                         </script>
 </body>
 </html>
