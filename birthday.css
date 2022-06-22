@@ -1,20 +1,50 @@
-
+#show{
+    positon: absolute;
+    top:560px;
+    left :141px;
+    background:#fff;
+}
 .titles{
     position: absolute;
-width: 626px;
+width: 840px;
 height: 51px;
-left: 300px;
-top: 250px;
+left: 150px;
+top: 360px;
 
 background: #B57369;
 border-radius: 20px 20px 0px 0px;
+}
+.titles2{
+    position: absolute;
+    width: 870px;
+    height: 61px;
+    left: 0px;
+    top: 850px;
+    
+    background: #B57369;
+    border-radius: 20px 20px 0px 0px;
 }
 .name{
     position: absolute;
 width: 58px;
 height: 25px;
+left: 68px;
+bottom: 170px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+}
+.name2{
+    position: absolute;
+width: 58px;
+height: 25px;
 left: 57px;
-bottom: 260px;
+bottom: 190px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -30,7 +60,23 @@ color: #FFFFFF;
 width: 82px;
 height: 25px;
 left: 255px;
-bottom: 260px;
+bottom: 170px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+
+color: #FFFFFF;
+
+}
+.birthday2{
+    position: absolute;
+width: 82px;
+height: 25px;
+left: 255px;
+bottom: 190px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -45,7 +91,7 @@ color: #FFFFFF;
 width: 71px;
 height: 25px;
 left: 500px;
-bottom: 260px;
+bottom: 170px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -55,6 +101,21 @@ line-height: 23px;
 
 color: #FFFFFF;
 }
+.gender2{
+    position: absolute;
+    width: 71px;
+    height: 25px;
+    left: 500px;
+    bottom: 190px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    
+    color: #FFFFFF;
+    }
 .class{
     position: absolute;
 width: 706px;
@@ -70,8 +131,8 @@ h1{
     position: absolute;
 width: 799px;
 height: 89px;
-left: 251px;
-top: 103px;
+left: 231px;
+top: 153px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
@@ -85,10 +146,10 @@ color: #FFFFFF;
 }
 .fcard{
     position: absolute;
-width: 1080px;
+width: 845px;
 height: 305px;
-left:  300px;
-top: 409px;
+left:  146px;
+top: 567px;
 
 background: #FFFFFF;
 border-radius: 0px 0px 20px 20px;
@@ -103,44 +164,375 @@ border-radius: 0px 0px 20px 20px;
   
 
 }
-tr{
-    height:50px;
+#t1{
+    position: absolute;
+width: 840px;
+height: 60px;
+left: 8px;
+bottom: 42px;
+
+background: #FFFFFF;
+}
+#t2{
+    position: absolute;
+    width: 840px;
+    height: 60px;
+    left:8px;
+    bottom: 0px;
+    
+    background: #FFFFFF;
+}
+#tr{
+    position: absolute;
+width: 840px;
+height: 60px;
+left:141px;
+bottom:320px;
+
+
+background: #FFFFFF;
 }
 
-td{
+/* #t4{
     position: absolute;
-    top:0px;
+    width: 870px;
+    height: 60px;
     left: 0px;
+    bottom:70px;
+    
+    background: #FFFFFF;  
+} */
+#tname1{
+    position:absolute;
+    position: absolute;
+width: 108px;
+height: 18px;
+left: 57px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+
+}
+
+#tdate1{
+    position: absolute;
+width: 71px;
+height: 20px;
+left: 255px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+#tgender1{
+    position: absolute;
+width: 38px;
+height: 20px;
+left: 500px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+#tedit1{
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left:581px;
+    top:0px;
+    
     font-family: 'Euclid Circular B';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+    text-decoration-line: underline;
     
-    color: #000;
-    background:#FFFFFF;
+    color: #995D53;
+    
+    
+
 }
+#tdelete1{
+    position: absolute;
+left: 73.12%;
+right: 25.49%;
+top: 41%;
+top:0px;
+
+border: 2px solid #995D53;
+}
+
+#tname2{
+
+position: absolute;
+width: 115px;
+height: 20px;
+left: 57px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tdate2{
+    position: absolute;
+width: 58px;
+height: 20px;
+left: 255px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+
+}
+#tgender2{
+    position: absolute;
+width: 38px;
+height: 20px;
+left: 500px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tedit2{
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left: 581px;
+    top: 0px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration-line: underline;
+    
+    color: #995D53;
+    
+}
+#tdelete2{
+    position: absolute;
+left: 140px;
+right: 25.49%;
+top: 47.44%;
+top:0px;
+
+border: 2px solid #995D53;
+}
+/* #tname3{
+    position: absolute;
+width: 115px;
+height: 20px;
+left: 57px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tdate3{
+    position: absolute;
+width: 58px;
+height: 20px;
+left: 255px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tgender3{
+    position: absolute;
+width: 38px;
+height: 20px;
+left: 500px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+
+#tedit3{
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left: 581px;
+    top: 0px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration-line: underline;
+    
+    color: #995D53;
+    
+}
+#tdelete3{
+    position: absolute;
+left: 73.12%;
+right: 25.49%;
+top: 47.44%;
+top:0px;
+
+border: 2px solid #995D53;
+}
+
+#tname4{
+    position: absolute;
+width: 115px;
+height: 20px;
+left: 57px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tdate4{
+    position: absolute;
+width: 58px;
+height: 20px;
+left: 255px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+#tgender4{
+    position: absolute;
+width: 38px;
+height: 20px;
+left: 500px;
+top: 0px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
+}
+
+#tedit4{
+    position: absolute;
+    width: 29px;
+    height: 20px;
+    left: 581px;
+    top: 0px;
+    
+    font-family: 'Euclid Circular B';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    text-decoration-line: underline;
+    
+    color: #995D53;
+    
+}
+#tdelete4{
+    position: absolute;
+left: 73.12%;
+right: 25.49%;
+top: 47.44%;
+top:0px;
+
+border: 2px solid #995D53;
+} */
 
 
 .search{
 
     position: absolute;
-    width: 626px;
+    width: 840px;
     height: 56px;
-    left: 300px;
-    bottom: 310px;
+    left: 150px;
+   top: 410px;
     
     background: #FFFFFF;
 }
 #search{
-    position: absolute;
-width: 506px;
-height: 42px;
-left: 7px;
-top: 2px;
+    
+position: absolute;
+width: 352px;
+height: 18px;
+left: 405px;
+top: 317px;
 
-background: #FFFFFF;
-border: 1px solid  #FFFFFF;
+font-family: 'Euclid Circular B';
+font-style: italic;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height */
+
+
+color: #808080;
 }
 #search1{
     position: absolute;
@@ -184,7 +576,7 @@ color: #B57369;
     position: absolute;
     width: 72px;
     height:18px;
-    left: 220px;
+    left: 320px;
    top:20px;
 
     font-family: 'Euclid Circular B';
@@ -234,7 +626,7 @@ border-radius: 5px;
     position: absolute;
 width: 50px;
 height: 18px;
-left: 462px;
+left: 562px;
 top: 20px;
 
 font-family: 'Euclid Circular B';
@@ -252,7 +644,7 @@ color: #995D53;
     box-sizing: border-box;
 
     position: absolute;
-    left: 220px;
+    left: 320px;
     top: 40px;
     width: 125px;
     height: 24px;
@@ -262,21 +654,30 @@ color: #995D53;
     border-radius: 5px;
     }
 
-.males{
+.male{
     position: absolute;
-    left:30px;
+    left:580px;
+    top:40px;
+}
+#male{
+    position: absolute;
+    left: 610px;
+    top:40px;
+
 }
 .female{
     position: absolute;
-    left: 55px;
+    left: 640px;
+    top:40px;
 }
-.females{
+#female{
     position: absolute;
-    left: 95px;
+    left: 690px;
+    top:40px;
 }
 .wishlist{
     position: absolute;
-    left:220px;
+    left:320px;
     top:100px;
     font-family: 'Euclid Circular B';
 font-style: normal;
@@ -309,6 +710,8 @@ line-height: 18px;
 color: #995D53;
 
 }
+
+
 #password{
     position:absolute;
     top:160px;
@@ -320,7 +723,7 @@ border-radius: 5px;
 .buttons{
     position:absolute;
     top:220px;
-    left:450px;
+    left:590px;
 }
 #ok{
     position:absolute;
@@ -356,15 +759,24 @@ color: #995D53;
 border: 1px solid #EEEEEE;
 border-radius: 5px;
 }
-#plus{
+.plus{
     position: absolute;
-    top: 489px;
-    left:286px;
-    width:630px;
+    top: 567px;
+    left:150px;
+    width:840px;
+    height:50px;
     background: #FFF;
     border-radius: 0px 0px 20px 20px;
     }
-
+    #plus{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 413px;
+    top: 0px;
+    
+    border: 2px solid #995D53;
+    }
 table{
     position: absolute;
     top:200px;
