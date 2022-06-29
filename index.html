@@ -15,28 +15,33 @@
     <div class="board2">
        
             <table id="show" border="1">
-                <div class="titles">
-                <tr>
-                    <th class="name">Name &#9662;</th>
+                <div>
+                    <thead>
+                <tr class="titles">
+                    <th class="name" onclick="sortingName();">Name &#9662;</th>
                     <th class="birthday">Birthday&#9662;</th>
                     <th colspan="3" class="gender">Gender &#9662;</th>
                 </tr>
+            </thead>
                 </div>
-              <div class="search"> <form id="search"><input type="search" id="search1" placeholder="Search a name, date or a wishlist item"></form></div>
-                <tr id="t1">
-                    <td id="tname1">Frodo Baggins</td>
-                    <td id="tdate1">March 24</td>
-                    <td id="tgender1">Male</td>
-                    <td id="tedit1"><button type="edit" id="edit" onClick="editTableRow(); myFunction()" >Edit</button></td>
-            <td id="tdelete1"><button type="delete" id="delete" onClick="deleteSelRow();" i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+              <div class="search"> <form id="search"><input type="search" onkeyup="searchName();" id="search1" placeholder="Search a name, date or a wishlist item"></form></div>
+              <tbody> 
+              <tr id="t1">
+                    <td id="tname1" onclick="nameFunc()">Frodo Baggins</td>
+                    <td id="tdate1" onclick="nameFunc()">March 24</td>
+                    <td id="tgender1" onclick="nameFunc()">Male</td>
+                    <td id="tedit1"><a type="submit" id="edit" onclick="editTableRow(); myFunction();" >Edit</a></td>
+            <td id="tdelete1"><a type="submit" id="delete" onclick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
                 </tr>
                 <tr id="t2">
-                    <td id="tname1">Luke Skywalker</td>
-                    <td  id="tdate1">April 26</td>
-                    <td id="tgender1">Male</td>
-                    <td id="tedit1"><button type="edit" id="edit" onClick=" myFunction()">Edit</button></td>
-                    <td id="tdelete1"> <button type="delete" id="delete" onClick="deleteSelRow();"<i style="font-size:24px" class="fa" color="#000">&#xf014;</i></button></td>
+                    <td id="tname1" onclick="nameFunc()">Luke Skywalker</td>
+                    <td  id="tdate1" onclick="nameFunc()">April 26</td>
+                    <td id="tgender1" onclick="nameFunc()">female</td>
+                    <td id="tedit1"><a type="submit" id="edit" onclick=" editTableRow(); myFunction();">Edit</a></td>
+                    <td id="tdelete1"><a type="submit" id="delete" onclick="deleteSelRow();"><i style="font-size:24px" class="fa" color="#000">&#xf014;</i></a></td>
                 </tr>
+                
+            </tbody>
             </table>
     
     <div class="tab" id="tab" style="display: none;">
@@ -45,11 +50,11 @@
         <div class="lname"><label id="lastn">Last Name</label><br><input type="text" name="lname" id="lname" placeholder="Appleseed"> <br></div>
         <div class="date"><label id="d">Date of Birth</label><br><input type="text" name="date" id="date" placeholder="mm/dd/yyyy">  <br>
         <label id="genders">Gender </label><br>
-        <label class="male">male</label><input type="radio" name="gender" id="male"  >
+        <label class="male">male</label><input type="radio" name="gender" id="male" checked >
         <label class="female">Female</label><input type="radio" name="gender" id="female"></div><br>
         <div class="password"><label id="p">Password</label><br><input type="password" name="password" id="password"><br></div>
-        <div class="wishlist"><label id="wish">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist" placeholder="Roses,Lavender, Blah Blah..."></textarea><br></div>
-        <div class="buttons"><button type="submit" name="ok" onClick="addTableRow(); yourFunction()" id="ok">Ok</button>
+        <div class="wishlist"><label id="wishlabel">Wishlist</label><br><textarea input type="textarea" name="wishlist" id="wishlist" placeholder="Roses,Lavender, Blah Blah..."></textarea><br></div>
+        <div class="buttons"><button type="submit" name="ok" onClick="addTableRow(); yourFunction(),addLi();" id="ok">Ok</button>
         <button type="reset" id="cancel"  onClick="yourFunction();">Cancel</button></div>
         
     </fieldset>
@@ -57,6 +62,51 @@
     <div class="plus" id="pls">
     <button type="submit" name="plus" onClick="myFunction()" id="plus">+</button>
 </div>    
+<div id="wish">
+<h2><button name="close" id="cls" onclick="wishFunc()" >x</button></h2>
+    <h2 class="wishtit">
+    Frodo's<br>birthday Wishlist
+</h2>
+<ul class="list">
+    <li class="orders" id="food">
+    KFC
+    </li>
+
+<li class="orders" id="sub">
+    Dentiflow Premium Subscriptions
+</li>
+<li class="orders" id="animal">
+    A goat
+</li>
+<li class="orders" id="nashef">
+    Towels
+</li>
+<li class="orders" id="ta3ate">
+    Socks
+</li>
+<li class="orders" id="waldane">
+    Peter Pan
+</li>
+<li class="orders" id="farashe">
+    Teeth
+</li>
+<li class="orders" id="sardine">
+    A sense of humour
+</li>
+<li class="orders" id="helem">
+    a promotion
+</li>
+<li class="orders" id="arnab">
+    a girlfriend
+</li>
+<li class="orders" id="awe">
+    The ring of power
+</li>
+<li class="orders" id="keresh">
+    Elven bread
+</li>
+</ul>
+</div>
 </div>
 
     <!-- <div class="container">
@@ -87,7 +137,7 @@
 
 
  
-                    <script src="script.js">
-                        </script>
+          <script src="./script.js">
+        </script>
 </body>
 </html>

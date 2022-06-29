@@ -2,19 +2,20 @@
     positon: absolute;
     top:560px;
     left :141px;
+    width:840px;
     background:#fff;
 }
 .titles{
     position: absolute;
 width: 840px;
 height: 51px;
-left: 150px;
-top: 360px;
+left: 6px;
+bottom: 152px;
 
 background: #B57369;
 border-radius: 20px 20px 0px 0px;
 }
-.titles2{
+/* .titles2{
     position: absolute;
     width: 870px;
     height: 61px;
@@ -23,19 +24,24 @@ border-radius: 20px 20px 0px 0px;
     
     background: #B57369;
     border-radius: 20px 20px 0px 0px;
+} */
+thead{
+    position:absolute;
+    top:0px;
 }
 .name{
     position: absolute;
 width: 58px;
 height: 25px;
 left: 68px;
-bottom: 170px;
+bottom: 10px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 23px;
+cursor:pointer;
 
 color: #FFFFFF;
 }
@@ -60,13 +66,14 @@ color: #FFFFFF;
 width: 82px;
 height: 25px;
 left: 255px;
-bottom: 170px;
+bottom: 10px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 23px;
+cursor:pointer;
 
 color: #FFFFFF;
 
@@ -91,13 +98,14 @@ color: #FFFFFF;
 width: 71px;
 height: 25px;
 left: 500px;
-bottom: 170px;
+bottom: 10px;
 
 font-family: 'Euclid Circular B';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
 line-height: 23px;
+cursor:pointer;
 
 color: #FFFFFF;
 }
@@ -146,10 +154,10 @@ color: #FFFFFF;
 }
 .fcard{
     position: absolute;
-width: 845px;
+width: 815px;
 height: 305px;
-left:  146px;
-top: 567px;
+left:  147px;
+top: 580px;
 
 background: #FFFFFF;
 border-radius: 0px 0px 20px 20px;
@@ -164,12 +172,20 @@ border-radius: 0px 0px 20px 20px;
   
 
 }
+tbody{
+    position:absolute;
+    width:840px;
+    min-height: 180px;
+    background-color: #Fff;
+    left:8px;
+    top:-100px;
+}
 #t1{
     position: absolute;
 width: 840px;
 height: 60px;
-left: 8px;
-bottom: 42px;
+left: 0px;
+bottom: 60px;
 
 background: #FFFFFF;
 }
@@ -177,20 +193,38 @@ background: #FFFFFF;
     position: absolute;
     width: 840px;
     height: 60px;
-    left:8px;
+    left:0px;
     bottom: 0px;
     
     background: #FFFFFF;
 }
-#tr{
+tr{
+    transition: all .25s ease-in-out;
+
     position: absolute;
-width: 840px;
-height: 60px;
-left:141px;
-bottom:320px;
+    width: 840px;
+    height: 60px;
+    left:0px;
+    background: #FFFFFF;
+   
+}
 
 
-background: #FFFFFF;
+td{
+    position: absolute;
+width: 108px;
+height: 18px;
+left: 0px;
+top: 0px;
+column-span: 3px;
+
+font-family: 'Euclid Circular B';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+
+color: #995D53;
 }
 
 /* #t4{
@@ -267,7 +301,7 @@ color: #995D53;
     line-height: 20px;
     text-align: right;
     text-decoration-line: underline;
-    
+    cursor:pointer;
     color: #995D53;
     
     
@@ -275,10 +309,12 @@ color: #995D53;
 }
 #tdelete1{
     position: absolute;
-left: 73.12%;
+left: 630px;
 right: 25.49%;
-top: 41%;
-top:0px;
+top: 0px;
+width:0px;
+height: 0px;
+cursor:pointer;
 
 border: 2px solid #995D53;
 }
@@ -303,7 +339,7 @@ color: #995D53;
     position: absolute;
 width: 58px;
 height: 20px;
-left: 255px;
+left: 305px;
 top: 0px;
 
 font-family: 'Euclid Circular B';
@@ -319,7 +355,7 @@ color: #995D53;
     position: absolute;
 width: 38px;
 height: 20px;
-left: 500px;
+left: 460px;
 top: 0px;
 
 font-family: 'Euclid Circular B';
@@ -334,7 +370,7 @@ color: #995D53;
     position: absolute;
     width: 29px;
     height: 20px;
-    left: 581px;
+    left: 561px;
     top: 0px;
     
     font-family: 'Euclid Circular B';
@@ -761,7 +797,7 @@ border-radius: 5px;
 }
 .plus{
     position: absolute;
-    top: 567px;
+    top: 641px;
     left:150px;
     width:840px;
     height:50px;
@@ -780,4 +816,84 @@ border-radius: 5px;
 table{
     position: absolute;
     top:200px;
+}
+
+#wish{
+    position: absolute;
+width: 850px;
+height: 330px;
+left: 148px;
+top: 360px;
+display: none;
+background: #FFFFFF;
+border-radius: 20px;
+}
+.wishtit{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+#food{
+    position:absolute;
+    top:90px;
+}
+#sub{
+    position:absolute;
+    top:130px;
+}
+#animal{
+    position: absolute;
+    top: 170px;
+
+}
+#nashef{
+    position: absolute;
+    top: 210px;
+}
+#ta3ate{
+    position: absolute;
+    top: 245px;
+}
+#waldane{
+    position: absolute;
+    top: 280px;
+}
+#farashe{
+    position: absolute;
+    right:110px;
+    top:90px;
+}
+#sardine{
+    position: absolute;
+    right:110px;
+    top:130px;
+}
+#helem{
+    position: absolute;
+    right:110px;
+    top:170px;
+}
+#arnab{
+    position: absolute;
+    right:110px;
+    top:210px;
+}
+#awe{
+    position: absolute;
+    right:110px;
+    top:245px;
+}
+#keresh{
+    position: absolute;
+    right:110px;
+    top:280px;
+}
+#cls{
+    cursor:pointer;
+    background:#FFFFFF;
+
+}
+
+.makeInline {
+    display: inline;
 }
