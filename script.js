@@ -4,6 +4,7 @@ var rIndex,table = document.getElementById("show"),index;
 var nam=document.getElementById("fname").value+" ";
 nam+=document.getElementById("lname").value;
 
+//hey i'm doing x HERE
 function checkEmpty(){
     let isEmpty=false;
     var fname= document.getElementById('fname').value,
@@ -12,6 +13,7 @@ function checkEmpty(){
     gender=document.getElementById("male").value,
     password=document.getElementById("password").value,
     wishlist=document.getElementById("wishlist").value;
+    // hey finished doing x here
     if(fname===""){
         isEmpty=false;
     }else if(lname===""){
@@ -33,38 +35,89 @@ function checkEmpty(){
     return isEmpty;
 }
 
-function sortingName (table , column, asc =true) {
-                const dirModifier= asc? 1:-1;
-                const tBody= table.tBodies[0];
-                const rows= Array.from(tBody.querySelectorAll("tr"));
+// function sortingName(table, col, reverse) {
+//     var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+//         tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+//         i;
+//     reverse = -((+reverse) || -1);
+//     tr = tr.sort(function (a, b) { // sort rows
+//         return reverse // `-1 *` if want opposite order
+//            (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+//                 .localeCompare(b.cells[col].textContent.trim(), undefined,{numeric:true})
+//                );
+//     });
+//     for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+// }
+// function makeSortable(table) {
+//     var th = table.tHead, i;
+//     th && (th = th.rows[0]) && (th = th.cells);
+//     if (th) i = th.length;
+//     else return; // if no `<thead>` then do nothing
+//     while (--i >= 0) (function (i) {
+//         var dir = 1;
+//         th[i].addEventListener('click', function () {sortingName(table, i, (dir = 1 - dir))});
+//     }(i));
+// }
+
+// function makeAllSortable(parent) {
+//     parent = parent || document.body;
+//     var t = parent.getElementsByTagName('table'), i = t.length;
+//     while (--i >= 0) makeSortable(t[i]);
+// }
 
 
-                //Sort each row
-                const sortedRows= rows.sort((a,b)=>{
-                    const aColText=a.querySelector(`td:nth-child(${column +1})`).textContext;
-                    const bColText=b.querySelector(`td:nth-child(${column +1})`).textContext;
-
-                    return aColText>bColText? (1*dirModifier):(-1*dirModifier)
-                });
-                while(tBody.firstChild){
-                    tBody.removeChild(tBody.firstChild);
-                }
-                tBody.append(...sortedRows);
-
-
-                table.querySelectorAll("th").forEach(th=>th.classList.remove("th-sort-asc","th-sort-desc")) 
-                 table.querySelector(`th-nth-child(${column +1})`).classList.toggle("th-sort-asc",asc);
-                 table.querySelector(`th-nth-child(${column +1})`).classList.toggle("th-sort-desc",!asc);   
-                };
-            document.querySelectorAll(".show thead").forEach(headerCell=>{
-                headerCell.addEventListener("click",()=>{
-                    const tableElement=headerCell.parentElement.parentElement.parentElement;
-                    const headerIndex =Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-                    const currentAscending =headerCell.classList.contains("th-sort-asc");
-
-                    sortingName(tableElement,headerIndex, !currentAscending);
-                });
-            });
+function table_sort() {
+    const styleSheet = document.createElement('style')
+    styleSheet.innerHTML = `
+          .order-inactive span {
+              visibility:hidden;
+          }
+          .order-inactive:hover span {
+              visibility:visible;
+          }
+          .order-active span {
+              visibility: visible;
+          }
+      `
+    document.head.appendChild(styleSheet)
+  
+    document.querySelectorAll('th.order').forEach(th_elem => {
+      let asc = true
+      const span_elem = document.createElement('span')
+      span_elem.style = "font-size:0.8rem; margin-left:0.5rem"
+      span_elem.innerHTML = "▼"
+      th_elem.appendChild(span_elem)
+      th_elem.classList.add('order-inactive')
+  
+      const index = Array.from(th_elem.parentNode.children).indexOf(th_elem)
+      th_elem.addEventListener('click', (e) => {
+        document.querySelectorAll('th.order').forEach(elem => {
+          elem.classList.remove('order-active')
+          elem.classList.add('order-inactive')
+        })
+        th_elem.classList.remove('order-inactive')
+        th_elem.classList.add('order-active')
+  
+        if (!asc) {
+          th_elem.querySelector('span').innerHTML = '▲'
+        } else {
+          th_elem.querySelector('span').innerHTML = '▼'
+        }
+        const arr=Array.from(th_elem.closest("table").querySelectorAll('tbody tr'))
+        arr.sort((a, b) =>{
+          const a_val = a.children[index].innerText
+          const b_val = b.children[index].innerText
+          return (asc) ? a_val.localeCompare(b_val) : b_val.localeCompare(a_val)
+        })
+        arr.forEach(elem => {
+          th_elem.closest("table").querySelector("tbody").appendChild(elem)
+        })
+        asc = !asc
+      })
+    })
+  }
+  
+  table_sort()
 
             function searchName(){
                 let input,filter,table,tr,td,i,textValue;
@@ -73,7 +126,7 @@ function sortingName (table , column, asc =true) {
             table=document.getElementById("show");
             tr=table.getElementsByTagName("tr");
 
-            for(let i=0;i<tr.length;i++){
+            for( i=0;i<tr.length;i++){
                 td=tr[i].getElementsByTagName("td")[0];
 
                 if(td){
@@ -101,17 +154,19 @@ function sortingName (table , column, asc =true) {
                             nam+=document.getElementById("lname").value;
                             date= document.getElementById("date").value;
                             gender= document.getElementById("male").checked;
-                            gender?"male":"female";
+                            let personGender=gender?"male":"female";
                             ed=document.getElementById("edit").value;
                             ed="<a type='submit' id='edit' onclick= 'editTableRow(); myFunction();'>Edit</a>"
+                            dele="<a type='submit' id='delete' onClick='deleteSelRow()'><i class='fa' style='font-size:24px color:#000'>&#xf014;</i></a>";
                             dele=document.getElementById("delete").value;
-                            dele="<i onClick=deleteSelRow() class='fa' style='font-size:24px color:#000'>&#xf014;</i>";
+                            
                             cell1.innerHTML = nam;
                             cell2.innerHTML= date;
-                            cell3.innerHTML = gender;
+                            cell3.innerHTML = personGender;
                             cell4.innerHTML=ed;
                             cell5.innerHTML=dele;
                             }
+                           
 
                             people.push(
                                 {
@@ -122,7 +177,27 @@ function sortingName (table , column, asc =true) {
                                     wishList: document.getElementById("wishlist").value.split(',')
                                 }
                             )
-
+                        //    let lis= function() {
+                        //         const reply = [this.nam, "'s birthday wishlist"].join(' ');
+                            
+                        //         console.log(reply);
+                        //       }
+                              
+                        //       const obj = {
+                        //         nam: document.getElementById("fname")
+                        //       };
+                              
+                        //       lis.call(obj,this.people.wishlist());
+                
+                        cell1.onclick= function(){
+                            nameFunc();
+                        }
+                        cell2.onclick= function(){
+                            nameFunc();
+                        }
+                        cell3.onclick= function(){
+                            nameFunc();
+                        }
                             console.log(people);
 
                         }
@@ -132,8 +207,10 @@ function sortingName (table , column, asc =true) {
                 for (var i=1;i<table.rows.length;i++){
                     table.rows[i].onClick=function(){
                         rIndex = this.rowIndex;
-                      document.getElementById("fname")=this.cells[0].innerHTML;
-                      document.getElementById("lname")=this.cells[0].innerHTML
+                         nam=document.getElementById("fname").value+" ";
+                        nam+=document.getElementById("lname").value;
+                            nam=this.cells[0].innerHTML;
+                      
                        document.getElementById("date")=this.cells[1].innerHTML;
                        document.getElementById("male")=this.cells[2].innerHTML;
                        document.getElementById("edit")=this.cells[3].innerHTML;
@@ -147,7 +224,7 @@ function sortingName (table , column, asc =true) {
             function editTableRow(){
                 var nam= document.getElementById('fname').value;
                 var date= document.getElementById("date").value,
-                gender=document.getElementById("male").value;
+                gender=document.getElementById("male").checked;
                 
                 ed=document.getElementById("edit").value;
                 del=document.getElementById("delete").value;
@@ -163,30 +240,34 @@ function sortingName (table , column, asc =true) {
             function deleteSelRow(){
                 
                 for (var i=1;i<table.rows.length;i++){
-        table.rows[i].cells[4].onclick=function(){
+        table.rows[i].cells[4].onclick= function(){
             rIndex=this.parentElement.rowIndex;
             table.deleteRow(rIndex);
             console.log(rIndex);
         };
-        
-                
   
-    const c=confirm("Delete Entry?");
-      
-    if(c===true){
-       password=prompt("Enter Password");
-   if(password===true && password!==null){
-       return deleteSelRow;
-   }else if(password===false){
-       return false;
-   }
-   
-}
-    return false;
+  
     
             
 }
             }
+
+            function checkDelete(){
+                const c=confirm("Delete Entry?");
+      
+                if(c===true){
+                   password=prompt("Enter Password");
+               if(password===true && password!==null){
+                   return deleteSelRow;
+               }else if(password===null){
+                   return false;
+               }
+               
+            }
+                return false;
+            }
+            
+            
            
 
             function myFunction(){
@@ -210,13 +291,14 @@ function sortingName (table , column, asc =true) {
 
             function addLi(){
                 var nam=document.getElementById("fname");
-                nam=`<h2 class="wishtit"> ${nam}'s<br>birthday Wishlist</h2>`
+                nam=`<h2 class="wishtit"> ${nam}'s<br>birthday Wishlist</h2>`;
                 var wishlist=document.getElementById("wishlist").value,
                 listNode= document.getElementById("list"),
                 liNode=document.createElement("LI"),
                 wishNode=document.createTextNode(wishlist);
 
-                liNode.appendChild(wishNode);
-                listNode.appendChild(liNode);
+                // liNode.appendChild(wishNode);
+                // listNode.appendChild(liNode);
 
             }
+          
